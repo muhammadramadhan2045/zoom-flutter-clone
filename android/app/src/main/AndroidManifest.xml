@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zum_clone">
+    package="com.example.zum_clone"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
+        tools:replace="android:label"
         android:label="zum_clone"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
