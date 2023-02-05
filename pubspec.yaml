@@ -36,12 +36,11 @@ dependencies:
   flutter:
     sdk: flutter
   google_sign_in: ^5.4.4
-  jitsi_meet: 
+  intl: ^0.17.0
+  jitsi_meet:
     git:
       url: https://github.com/dispersik/jitsi_meet_fork
       ref: master
-
-
 
 dev_dependencies:
   flutter_lints: ^2.0.0

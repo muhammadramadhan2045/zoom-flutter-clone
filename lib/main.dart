@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:zum_clone/screens/home_screen.dart';
 import 'package:zum_clone/screens/login_screen.dart';
+import 'package:zum_clone/screens/video_call_screen.dart';
 import 'package:zum_clone/utils/colors.dart';
 
 void main() async {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         'home': (context) => const HomeScreens(),
+        '/video-call': (context) => const VideoCallScreen(),
       },
       home: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
