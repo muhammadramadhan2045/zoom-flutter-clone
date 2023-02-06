@@ -47,4 +47,13 @@ class AuthMethod {
     }
     return res;
   }
+
+  void logout() async {
+    try {
+      _auth.signOut();
+      GoogleSignIn().signOut();
+    } catch (e) {
+      print(e);
+    }
+  }
 }

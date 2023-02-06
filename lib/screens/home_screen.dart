@@ -1,8 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:zum_clone/resources/auth_method.dart';
 import 'package:zum_clone/screens/histori_meeting_screen.dart';
 import 'package:zum_clone/screens/meeting_screen.dart';
 import 'package:zum_clone/utils/colors.dart';
+import 'package:zum_clone/widgets/customs_button.dart';
 import 'package:zum_clone/widgets/home_meeting_button.dart';
 
 class HomeScreens extends StatefulWidget {
@@ -14,11 +16,13 @@ class HomeScreens extends StatefulWidget {
 
 class _HomeScreensState extends State<HomeScreens> {
   int _page = 0;
+
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   List<Widget> pages = [
     MeetingScreen(),
     const HistoriMeetingScreen(),
     MeetingScreen(),
+    CustomButton(text: 'Log Out', onpressed: () => AuthMethod().logout()),
   ];
   @override
   Widget build(BuildContext context) {
